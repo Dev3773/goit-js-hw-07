@@ -43,6 +43,8 @@ img {
 
 /* ***-----*** */
 
+/*** Task - 1 ***/
+
 .slogan {
   color: blue;
   font-size: 1.25rem;
@@ -112,3 +114,29 @@ img {
 .category--item:not(:last-child) {
    margin-bottom: 0.5rem;
 }
+
+/* ***-----*** */
+
+/*** Task - 2 ***/
+
+.gallery {
+   display: flex;
+   flex-wrap: wrap;
+   row-gap: 48px;
+   column-gap: 24px;
+
+   justify-content: center;
+   align-items: center;
+   max-width: 1128px;
+   margin: 0 auto;
+}
+
+.gallery--img {
+   width: 360px;
+   height: 240px;
+}
+
+/* ***-----*** */
+
+/*** Task - 3 ***/
+
