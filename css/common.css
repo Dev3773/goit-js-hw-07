@@ -12,3 +12,103 @@ body {
   color: #212121;
   line-height: 1.5;
 }
+
+/*** Reset ***/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.list {
+  list-style: none;
+}
+
+/* ***-----*** */
+
+.slogan {
+  color: blue;
+  font-size: 1.25rem;
+}
+
+.slogan:hover {
+  color: red;
+}
+
+.box {
+  width: 27.5rem;
+  height: auto;
+  margin-right: auto;
+  margin-left: auto;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+
+  background-color: #fff;
+}
+
+.box--list {
+  font-family: "Montserrat", sans-serif;
+
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.5rem;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.box--item {
+  width: 24.5rem;
+  height: auto;
+  border-radius: 0.5rem;
+  padding: 1rem;
+
+  background: #f6f6fe;
+}
+
+.box--title {
+  color: #2e2f42;
+
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 1.33333;
+  letter-spacing: 0.04em;
+  
+  margin-bottom: 1rem;
+}
+
+.category--item {
+  color: #2e2f42;
+
+  border: 1px solid #808080;
+  border-radius: 0.25rem;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+    
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 1rem;
+  text-align: left;
+}
+
+.category--item:not(:last-child) {
+   margin-bottom: 0.5rem;
+}
