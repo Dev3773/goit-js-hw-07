@@ -51,7 +51,7 @@ img {
   margin-bottom: 10px;
 }
 
-.slogan:hover {
+.slogan:hover, .slogan:focus {
   color: red;
 }
 
@@ -86,7 +86,7 @@ img {
   border-radius: 0.5rem;
   padding: 1rem;
 
-  background: #f6f6fe;
+  background-color: #f6f6fe;
 }
 
 .box__title {
@@ -156,7 +156,7 @@ img {
   padding: 1.5rem;
 
   margin-right: auto;
-    margin-left: auto;
+  margin-left: auto;
 }
 
 .box-text__input {
@@ -192,4 +192,75 @@ img {
 /* ***-----*** */
 
 /*** Task - 4 ***/
+
+.login-form {
+  background-color: #fff;
+
+  width: 25.5rem;
+  height: auto;
+
+  font-family: "Montserrat", sans-serif;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.login-form__label  {
+  color: #2e2f42;
+
+  display: block;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  margin-bottom: 0.5rem;
+}
+
+.login-form__email, .login-form__password {
+  display: block;
+
+  color: #2e2f42;
+
+  width: 22.5rem;
+  height: 2.5rem;
+  border-radius: 5px;
+  border: 0.0625rem solid #808080;
+
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  margin-bottom: 0.5rem;
+}
+
+.login-form__password {
+  margin-bottom: 1rem;
+}
+
+.login-form__btn {
+  background-color: #4e75ff;
+  color: #fff;
+
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  width: 5.375rem;
+  height: 2.5rem;
+
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+}
+
+.login-form__btn:hover, .login-form__btn:focus {
+  background-color: #fff;
+  color:  #4e75ff;
+}
+
+/* ***-----*** */
+
+/*** Task - 5 ***/
 
