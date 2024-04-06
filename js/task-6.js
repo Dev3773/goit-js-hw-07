@@ -26,7 +26,7 @@ const boxesRef = document.querySelector("#boxes");
 
 const readValue = () => {
   const amount = Number(inputNumber.value);
-  destroyBoxes();
+  
   if (amount >= 1 && amount <= 100) {
     createBoxes(amount);
   } else {
