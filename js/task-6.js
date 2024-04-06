@@ -4,68 +4,43 @@ function getRandomHexColor() {
     .padStart(6, 0)}`;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-const inputNumber = document.querySelector("input");
-const boxesRef = document.querySelector("#boxes");
-const buttonCreate = document.querySelector("button[data-create]");
-const buttonDestroy = document.querySelector("button[data-destroy]");
-
-let nameInput;
-
-const targetValue = ((event) => {
-  nameInput = event.currentTarget.value;
-});
-
-inputNumber.addEventListener("input", targetValue);
-
 function createBoxes(amount) {
-  if (amount < 1) {
-    alert("Please enter a number greater than or equal to 1.");
-    return;
-  }
-
-  let size = 30;
- 
-  for (let i = 0; i < amount; i += 1) {
-    const boxCountInput = document.createElement("div");
-    boxCountInput.classList.add("boxes__item");
-    boxCountInput.style.width = `${size}px`;
-    boxCountInput.style.height = `${size}px`;
-    boxCountInput.style.backgroundColor = getRandomHexColor();
-    boxesRef.appendChild(boxCountInput);
-
-    size += 10;
+  for (let i = 0; i < amount; i++) {
+    const box = document.createElement('div');
+    box.classList.add("boxes__item");
+    box.style.width = `${30 + i * 10}px`;
+    box.style.height = `${30 + i * 10}px`;
+    box.style.backgroundColor = getRandomHexColor();
+    boxesRef.appendChild(box)
   }
 }
 
-const numberCreate = (() => {
-  if (nameInput && !isNaN(nameInput)) {
-    createBoxes(nameInput);
+function destroyBoxes() {
+  boxesRef.innerHTML = '';
+}
+
+const inputNumber = document.querySelector("input[type='number']");
+const buttonCreate = document.querySelector("button[data-create]");
+const buttonDestroy = document.querySelector("button[data-destroy]");
+const boxesRef = document.querySelector("#boxes");
+
+const readValue = () => {
+  const amount = Number(inputNumber.value);
+  destroyBoxes();
+  if (amount >= 1 && amount <= 100) {
+    createBoxes(amount);
   } else {
-    alert("Please enter a valid number.");
+    alert('Please enter a number between 1 and 100.');
   }
+  inputNumber.value = '';
+};
+
+buttonCreate.addEventListener("click", readValue);
+
+buttonDestroy.addEventListener("click", () => {
+  destroyBoxes();
 });
 
-const destroyBoxes = (() => boxesRef.innerHTML = '');
 
-buttonCreate.addEventListener("click", numberCreate);
-buttonDestroy.addEventListener("click", destroyBoxes);
+
+
